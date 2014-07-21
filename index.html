@@ -1,0 +1,20 @@
+    <html ng-app>
+    <head>
+        <title>Hello Agular !!</title>
+        <script type="text/javascript" src="../lib/angular.js"></script>
+    </head>
+        <div class="container" ng-init="friends=[{name:'raghu',city:'Delhi',perc:200.3},{name:'raj',city:'Daman',perc:8800.3},{name:'Jay',city:'Hyd',perc:333}]">
+            <input type="text" ng-model="name">
+            {{name}}
+
+            <bharath>
+                <tr ng-repeat="friend in friends | filter : name | orderBy:'city'" >
+                    <td>{{friend.name | uppercase}}</td>
+                    <td>{{friend.city | uppercase}}</td>
+                    <td>{{friend.perc | currency}}</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+    </html>
